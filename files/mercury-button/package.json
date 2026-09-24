@@ -1,0 +1,64 @@
+{
+  "name": "mercury-button",
+  "version": "1.0.0",
+  "description": "Liquid-metal glass button for the web, with gravity-aware tilt physics and a constant-volume liquid.",
+  "keywords": [
+    "button",
+    "ui",
+    "css",
+    "glassmorphism",
+    "liquid",
+    "mercury",
+    "animation",
+    "device-orientation",
+    "web-component",
+    "android",
+    "ios"
+  ],
+  "homepage": "https://YOUR-USERNAME.github.io/mercury-button/",
+  "bugs": {
+    "url": "https://github.com/YOUR-USERNAME/mercury-button/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR-USERNAME/mercury-button.git"
+  },
+  "license": "MIT",
+  "author": "Fakhar",
+  "main": "dist/mercury-button.min.js",
+  "style": "dist/mercury-button.min.css",
+  "types": "dist/mercury-button.d.ts",
+  "unpkg": "dist/mercury-button.min.js",
+  "jsdelivr": "dist/mercury-button.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/mercury-button.d.ts",
+      "default": "./dist/mercury-button.min.js"
+    },
+    "./css": "./dist/mercury-button.min.css",
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": true,
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build:js": "esbuild src/mercury-button.js --minify --target=es2019 --legal-comments=inline --outfile=dist/mercury-button.min.js",
+    "build:css": "lightningcss --minify --targets \">= 0.5%, not dead\" src/mercury-button.css -o dist/mercury-button.min.css",
+    "build:copy": "node -e \"const f=require('fs');f.mkdirSync('dist',{recursive:true});for(const n of ['mercury-button.js','mercury-button.css','mercury-button.d.ts'])f.copyFileSync('src/'+n,'dist/'+n)\"",
+    "build": "npm run clean && npm run build:copy && npm run build:js && npm run build:css",
+    "dev": "npm run build && npx --yes serve . -l 5173",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "lightningcss-cli": "^1.28.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07080b">
+  <title>mercury-button demo</title>
+  <link rel="stylesheet" href="../dist/mercury-button.min.css">
+  <script src="../dist/mercury-button.min.js" defer></script>
+  <style>
+    :root {
+      --page-bg: #07080b;
+      --page-text: #c9d1dc;
+      --page-glow-a: rgba(120, 138, 168, 0.20);
+      --page-glow-b: rgba(70, 80, 104, 0.28);
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --page-bg: #d9dde3;
+        --page-text: #3a424e;
+        --page-glow-a: rgba(255, 255, 255, 0.85);
+        --page-glow-b: rgba(150, 162, 182, 0.45);
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      color: var(--page-text);
+      background:
+        radial-gradient(60% 45% at 50% 38%, var(--page-glow-a), transparent 70%),
+        radial-gradient(80% 60% at 50% 100%, var(--page-glow-b), transparent 70%),
+        var(--page-bg);
+      font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .demo { display: flex; flex-direction: column; align-items: center; gap: 36px; padding: 24px; }
+    .demo__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+    .demo__hint { font-size: 13px; opacity: 0.7; text-align: center; max-width: 32ch; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <button class="mercury-button mercury-button--lg" type="button" data-fill="0.85">Push</button>
+    <div class="demo__row">
+      <button class="mercury-button mercury-button--gold" type="button" data-fill="0.85">Confirm</button>
+      <button class="mercury-button mercury-button--sm" type="button" data-fill="0.6">Next</button>
+    </div>
+    <p class="demo__hint">Tilt your phone, or move the mouse across the page on desktop.</p>
+  </main>
+  <script>
+    addEventListener('DOMContentLoaded', () => MercuryButton.setMouseTilt(true));
+  </script>
+</body>
+</html>
