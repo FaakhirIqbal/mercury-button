@@ -4,7 +4,7 @@ A liquid-metal glass button for the web. The metal sits inside a glass chamber, 
 
 No dependencies. One CSS file, one JS file, about 7 KB + 10 KB minified.
 
-**[Live demo](https://YOUR-USERNAME.github.io/mercury-button/)**
+**[Live demo](https://FaakhirIqbal.github.io/mercury-button/)**
 
 ## Features
 
@@ -108,7 +108,7 @@ Latest two versions of Chrome, Edge, Safari, Firefox, Samsung Internet, iOS Safa
 ## Development
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/mercury-button.git
+git clone https://github.com/FaakhirIqbal/mercury-button.git
 cd mercury-button
 npm install
 npm run dev        # builds, then serves at http://localhost:5173/demo/
