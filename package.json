@@ -15,16 +15,19 @@
     "android",
     "ios"
   ],
-  "homepage": "https://YOUR-USERNAME.github.io/mercury-button/",
+  "homepage": "https://faakhiriqbal.github.io/mercury-button/",
   "bugs": {
-    "url": "https://github.com/YOUR-USERNAME/mercury-button/issues"
+    "url": "https://github.com/FaakhirIqbal/mercury-button/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR-USERNAME/mercury-button.git"
+    "url": "git+https://github.com/FaakhirIqbal/mercury-button.git"
   },
   "license": "MIT",
-  "author": "Fakhar",
+  "author": {
+    "name": "Fakhar",
+    "url": "https://github.com/FaakhirIqbal"
+  },
   "main": "dist/mercury-button.min.js",
   "style": "dist/mercury-button.min.css",
   "types": "dist/mercury-button.d.ts",

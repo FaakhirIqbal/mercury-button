@@ -1,10 +1,14 @@
 # mercury-button
 
+[![CI](https://github.com/FaakhirIqbal/mercury-button/actions/workflows/ci.yml/badge.svg)](https://github.com/FaakhirIqbal/mercury-button/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/mercury-button)](https://www.npmjs.com/package/mercury-button)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A liquid-metal glass button for the web. The metal sits inside a glass chamber, stays level with real gravity when the phone tilts, sloshes when it moves, and surges toward the spot you press. The volume is solved every frame, so the chamber always holds the same amount of liquid at any angle.
 
 No dependencies. One CSS file, one JS file, about 7 KB + 10 KB minified.
 
-**[Live demo](https://FaakhirIqbal.github.io/mercury-button/)**
+**[Live demo](https://faakhiriqbal.github.io/mercury-button/)**
 
 ## Features
 
